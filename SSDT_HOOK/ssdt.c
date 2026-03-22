@@ -12,7 +12,7 @@ ULONG wpOff()
 {
 	ULONG cr0 = __readcr0();
 	_disable();
-	__writecr0(cr0 & (~0x10000));
+	__writecr0(cr0 & (~0x));
 	return cr0;
 }
 
@@ -40,13 +40,13 @@ VOID SsdtDestory()
 
 PSsdtTable SsdtGet()
 {
-	return (PSsdtTable)((PUCHAR)KeServiceDescriptorTable + 0x40);
+	return (PSsdtTable)((PUCHAR)KeServiceDescriptorTable + 0x);
 }
 
 ULONG SsdtGetFunctionIndex(char * funName)
 {
 	PUCHAR func = (PUCHAR)ExportTableFuncByName(gMapNtdll, funName);
-	if (!func) return -1;
+	if (!func) return ;
 	return *(PULONG)(func + 1);
 }
 
@@ -56,7 +56,7 @@ ULONG_PTR SsdtSetHook(char * funName, ULONG_PTR newFunction)
 
 	ULONG index = SsdtGetFunctionIndex(funName);
 
-	if (index == -1) return 0;
+	if (index == ) return 0;
 
 	ULONG function = ssdtTable->ssdt.funcTable[index];
 
@@ -69,4 +69,3 @@ ULONG_PTR SsdtSetHook(char * funName, ULONG_PTR newFunction)
 	return function;
 
 }
-
