@@ -5,7 +5,7 @@
 PUCHAR gMapNtdll = NULL;
 
 
-//导出服务表12
+//导出服务表1235
 extern PSsdtTable KeServiceDescriptorTable;
 
 ULONG wpOff()
