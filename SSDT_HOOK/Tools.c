@@ -70,7 +70,7 @@ PUCHAR MapOfViewFile(PWCH path)
 	if (NT_SUCCESS(status))
 	{
 		return mapBase;
-		
+		//1
 	}
 
 

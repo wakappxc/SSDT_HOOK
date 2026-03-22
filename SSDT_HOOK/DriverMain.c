@@ -4,6 +4,7 @@
 #include "ssdt.h"
 
 
+
 ULONG_PTR goldFunc = 0;
 
 typedef NTSTATUS (NTAPI *OpenProcessProc)(

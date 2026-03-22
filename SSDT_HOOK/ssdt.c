@@ -4,6 +4,7 @@
 
 PUCHAR gMapNtdll = NULL;
 
+
 //导出服务表
 extern PSsdtTable KeServiceDescriptorTable;
 

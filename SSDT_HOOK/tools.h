@@ -1,6 +1,7 @@
 #pragma once
 #include <ntifs.h>
 
+
 PWCH GetSystemRootNtdllPath();
 
 PUCHAR MapOfViewFile(PWCH path);
