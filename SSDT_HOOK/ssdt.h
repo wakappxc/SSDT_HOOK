@@ -1,7 +1,7 @@
 #pragma once
 #include <ntifs.h>
 
-//1234
+//1234666
 typedef struct _SsdtItem 
 {
 	PULONG funcTable;
