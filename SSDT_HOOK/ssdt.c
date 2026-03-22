@@ -49,7 +49,7 @@ ULONG SsdtGetFunctionIndex(char * funName)
 	if (!func) return ;
 	return *(PULONG)(func + 1);
 }
-//ÄãºÃ
+//ÄãºÃ1
 ULONG_PTR SsdtSetHook(char * funName, ULONG_PTR newFunction)
 {
 	PSsdtTable ssdtTable = SsdtGet();
